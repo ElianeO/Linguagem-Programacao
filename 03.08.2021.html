@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!--- cabeçalho do documento html --->
+<html> <!--- elemnto raiz ---> 
+    <head> <!--- cabeçalho da página ---> 
+        <title> Cauculadora do IMC</title> <!--- Título da guia -->
+        <meta charset = "utf-8"/> <!-- conteúdo (conjunto de caracteres) é no idioma português do Brasil-->
+        <style>
+            /* estilo do corpo da pagina em pixels */
+            body{
+                width: 800px; /* largura da página em pixels */
+                margin:auto; /* espaçamento externo automático à esquerda e a direita*/
+                border: 2px solid red;
+            }
+            /* estilo do cabeçalho do main */
+            header{
+                margin-top: 50px;
+            }
+            main{
+                margin-top: 20px;
+            }
+        </style>
+        <head> 
+            <body> <!--- corpo da pagina ---> 
+                <head> <!--- cabeçalho do corpo da pagina -->
+                    Cauculadora do IMC
+                </head>
+                <main> <!--- conteúdo  principal da  página -->
+                    <label> Informe seu peso </label>
+                    <input type="number" id="peso"/>
+                    <label> Informe sua altura </label>
+                    <input type="number" id="altura"/>
+                    <button onClick="calcula()" type="button"  > Caucular IMC </button>
+ 
+                </main>
+                <footer> <!--- rodapé da página --->
+                    Desenvolvido por alunos do 2o. Ciclo de ADS da Factec Franca - agosto de 2021
+                </footer>
+                <script>
+                    function calcula(){
+                        //vamos recuperar os dados do HTML
+                        //Perceba que a variável não tem tipo de dados- JS não é tipado
+                        let peso = document.getElementById("peso").value //valor do elemento
+                        let altura = document.getElementById("altura").value //valor do elemento
+                        //Processamento
+                        let imc = peso / (altura*altura) // operadores matemáticos exponencial é representado por **
+                        // O jeito antigo de concatenar string
+                        // alert("O seu IMC é de ", + imc)
+                        // mostrar o resultado- estamos utilizando template string
+                        //alert(`O seu IMC é de ${imc}`)
+                        // colocar o resultado dentro da página
+                        document.getElementById("imc").innerHTML = `O seu IMC é de ${imc.toFixed(2)}`//duas casas após a vírgula
+                  }
+                </script>
+            </body>
+        </head>
+    </head>
+</html>

@@ -1,0 +1,28 @@
+body{
+    width: 600px; /* largura */
+    margin: auto; /* centralizado */
+    background-color: rgba(0, 255, 255, 0.486);
+    margin-top: 100px; /* espaçamento externo acima */
+    background-image: linear-gradient(to right, rgb(87, 230, 170), rgb(233, 150, 196));
+    border-style: solid;
+    border-color: rgb(96, 9, 109);
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+
+}
+
+div{
+    padding: 10px;
+}
+
+li{
+    padding: 5px;
+}
+
+main{
+    background-color: rgba(151, 217, 255, 0.795);
+    text-align: center;
+}
+footer{
+    font-size: 15px;
+ }
